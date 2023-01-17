@@ -27,16 +27,15 @@ void GetMidleArithmetic(int[,] verifiableArray)
 {
   double midleArr = 0;
   Console.WriteLine();
-  for (int j = 0; j < verifiableArray.GetLength(0); j++)
+  for (int j = 0; j < verifiableArray.GetLength(1); j++)
   {
-    for (int i = 0; i < verifiableArray.GetLength(1); i++)
+    for (int i = 0; i < verifiableArray.GetLength(0); i++)
     {
       midleArr += verifiableArray[i, j];
     }
-    Console.WriteLine($"Среднее арифметическое чисел {j + 1} столбца = {Math.Round(midleArr / verifiableArray.GetLength(1), 2)}");
+    Console.WriteLine($"Среднее арифметическое чисел {j + 1} столбца = {Math.Round(midleArr / verifiableArray.GetLength(0), 2)}");
     midleArr = 0;
   }
-
 }
 
 int[,] array = CreateFillArray();
